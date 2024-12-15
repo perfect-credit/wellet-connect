@@ -1,5 +1,5 @@
 import { ConnectButton } from "thirdweb/react";
-import thirdwebIcon from "./thirdweb.svg";
+import thirdwebIcon from "./thirdweb.jpg";
 import { client } from "./client";
 
 export function App() {
@@ -9,7 +9,7 @@ export function App() {
 				<Header />
 
 				<div className="flex justify-center mb-20">
-					<ConnectButton
+					<ConnectButton 
 						client={client}
 						appMetadata={{
 							name: "Example app",
@@ -30,25 +30,19 @@ function Header() {
 			<img
 				src={thirdwebIcon}
 				alt=""
-				className="size-[150px] md:size-[150px]"
+				// className="size-[250px] md:size-[250px]"
 				style={{
-					filter: "drop-shadow(0px 0px 24px #a726a9a8)",
+					filter: "drop-shadow(0px 0px 24px #a726a9a8)", width: "400px", height: "250px"
 				}}
 			/>
+			<br />
+			<br />
 
-			<h1 className="text-2xl md:text-6xl font-bold tracking-tighter mb-6 text-zinc-100">
-				thirdweb SDK
-				<span className="text-zinc-300 inline-block mx-1"> + </span>
-				<span className="inline-block -skew-x-6 text-violet-500"> vite </span>
-			</h1>
+			<h3 className="text-2xl md:text-4xl font-bold tracking-tighter mb-6 text-zinc-100">
+				<span className="inline-block -skew-x-6 text-violet-500"> Enjoy  wallet connect. </span>
+			</h3>
 
-			<p className="text-zinc-300 text-base">
-				Read the{" "}
-				<code className="bg-zinc-800 text-zinc-300 px-2 rounded py-1 text-sm mx-1">
-					README.md
-				</code>{" "}
-				file to get started.
-			</p>
+			
 		</header>
 	);
 }
@@ -57,21 +51,21 @@ function ThirdwebResources() {
 	return (
 		<div className="grid gap-4 lg:grid-cols-3 justify-center">
 			<ArticleCard
-				title="thirdweb SDK Docs"
-				href="https://portal.thirdweb.com/typescript/v5"
-				description="thirdweb TypeScript SDK documentation"
+				title="cripto wallet"
+				href="https://www.coinbase.com/learn/crypto-basics/what-is-a-crypto-wallet"
+				description="Crypto wallets are designed to store your private key, keeping your crypto accessible at all times. They also allow you to send, receive, and spend cryptocurrencies like Bitcoin and Ethereum."
 			/>
 
 			<ArticleCard
-				title="Components and Hooks"
-				href="https://portal.thirdweb.com/typescript/v5/react"
-				description="Learn about the thirdweb React components and hooks in thirdweb SDK"
+				title="Blockchain Wallet"
+				href="https://www.geeksforgeeks.org/what-is-blockchain-wallet/"
+				description="A blockchain wallet is a software that enables sending and receiving cryptocurrencies such as Bitcoin, Ethereum, etc. It stores the record of transactions and also public and private keys which are used to perform transactions. "
 			/>
 
 			<ArticleCard
-				title="thirdweb Dashboard"
-				href="https://thirdweb.com/dashboard"
-				description="Deploy, configure, and manage your smart contracts from the dashboard."
+				title="Wallet Account Agreement"
+				href="https://www.nium.com/legal/column-wallet-account-agreement"
+				description="IMPORTANT - PLEASE READ CAREFULLY. THIS AGREEMENT CONTAINS AN ARBITRATION PROVISION REQUIRING ALL CLAIMS TO BE RESOLVED BY WAY OF BINDING ARBITRATION."
 			/>
 		</div>
 	);
@@ -86,12 +80,12 @@ function ArticleCard(props: {
 		<a
 			href={`${props.href}?utm_source=vite-template`}
 			target="_blank"
-			className="flex flex-col border border-zinc-800 p-4 rounded-lg hover:bg-zinc-900 transition-colors hover:border-zinc-700"
+			className="flex flex-col border border-zinc-1000 p-1 rounded-5g hover:bg-zinc-900 transition-colors hover:border-zinc-700"
 			rel="noreferrer"
 		>
 			<article>
-				<h2 className="text-lg font-semibold mb-2">{props.title}</h2>
-				<p className="text-sm text-zinc-400">{props.description}</p>
+				<h2 className="text-2xl md:text-3xl font-bold tracking-tighter mb-6 text-zinc-100">{props.title}</h2>
+				<p className="text-1xl md:text-1xl font-bold tracking-tighter mb-6 text-zinc-100">{props.description}</p>
 			</article>
 		</a>
 	);
